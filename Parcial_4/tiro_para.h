@@ -24,7 +24,7 @@ private:
 public:
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = Q_NULLPTR);
-    tiro_para(int x,int y);
+    tiro_para(int x,int y, int tipo,int a);
     void ActualizarVelocidad();
 
     double getPosy() const;
@@ -32,6 +32,12 @@ public:
 
     double getPosx() const;
     void setPosx(double value);
+
+    double getVel_x() const;
+    void setVel_x(double value);
+
+    double getVel_y() const;
+    void setVel_y(double value);
 
 private slots:
     void ActualizarPosicion();
