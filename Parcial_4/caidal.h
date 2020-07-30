@@ -5,28 +5,35 @@
 #include <QTimer>
 #include <QPainter>
 #include <math.h>
+#include <QPainter>
+#include <QGraphicsPixmapItem>
+#include <QObject>
+#include <QGraphicsItem>
+#include <QTimer>
+#include <QPixmap>
+#include <QPainter>
+#include <math.h>
+#include <QDebug>
+
 
 class caidaL:public QObject, public QGraphicsItem
 {
     Q_OBJECT
 public:
-
+    caidaL(int x,QGraphicsItem * parent=0);
+    void actu_vel();
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = Q_NULLPTR);
 
-    caidaL();
-    caidaL(int x,int y);
-    void vel_act();
-
 private slots:
     void move();
+
 private:
-    QTimer *timepo=new QTimer();
     short con=0;
     double pos_inicial;
     double g= 9.8;
     double PosY,PosX, h, w,Vel,delta=0.5;
-    int r=8;
+    int r=10;
 };
 
 #endif // CAIDAL_H

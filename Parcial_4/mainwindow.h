@@ -42,7 +42,7 @@ private:
     QList<obstaculo*> internos;
     QList<caidaL*> objetos;
     QList<tiro_para*> tiros;
-    QTimer *timepo=new QTimer;
+    QTimer *timepo=new QTimer,*timepo2=new QTimer;
     int Xt,Yt;
 };
 #endif // MAINWINDOW_H
